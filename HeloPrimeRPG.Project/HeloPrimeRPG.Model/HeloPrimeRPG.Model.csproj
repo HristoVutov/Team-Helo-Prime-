@@ -41,8 +41,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Characters\Character.cs" />
+    <Compile Include="Characters\Dwarf.cs" />
+    <Compile Include="Characters\Elf.cs" />
+    <Compile Include="Characters\Human.cs" />
+    <Compile Include="Characters\Mage.cs" />
+    <Compile Include="Characters\Orc.cs" />
+    <Compile Include="Characters\Barbarian.cs" />
+    <Compile Include="Characters\Undead.cs" />
     <Compile Include="Effect.cs" />
+    <Compile Include="GameObject.cs" />
     <Compile Include="GameState.cs" />
+    <Compile Include="Interfaces\IPosition.cs" />
+    <Compile Include="Interfaces\ISpell.cs" />
+    <Compile Include="Items\Item.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Skill.cs" />
   </ItemGroup>
