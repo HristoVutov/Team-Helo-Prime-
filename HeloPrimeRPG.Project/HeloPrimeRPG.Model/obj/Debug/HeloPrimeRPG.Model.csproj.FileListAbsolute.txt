@@ -1,0 +1,7 @@
+C:\Users\vutov\Documents\GitHub\Team-Helo-Prime-\HeloPrimeRPG.Project\HeloPrimeRPG.Model\bin\Debug\HeloPrimeRPG.Model.dll
+C:\Users\vutov\Documents\GitHub\Team-Helo-Prime-\HeloPrimeRPG.Project\HeloPrimeRPG.Model\bin\Debug\HeloPrimeRPG.Model.pdb
+C:\Users\vutov\Documents\GitHub\Team-Helo-Prime-\HeloPrimeRPG.Project\HeloPrimeRPG.Model\obj\Debug\HeloPrimeRPG.Model.csprojResolveAssemblyReference.cache
+C:\Users\vutov\Documents\GitHub\Team-Helo-Prime-\HeloPrimeRPG.Project\HeloPrimeRPG.Model\obj\Debug\HeloPrimeRPG.Model.dll
+C:\Users\vutov\Documents\GitHub\Team-Helo-Prime-\HeloPrimeRPG.Project\HeloPrimeRPG.Model\obj\Debug\HeloPrimeRPG.Model.pdb
+C:\Users\vutov\Documents\GitHub\Team-Helo-Prime-\HeloPrimeRPG.Project\HeloPrimeRPG.Model\bin\Debug\System.Net.Http.dll
+C:\Users\vutov\Documents\GitHub\Team-Helo-Prime-\HeloPrimeRPG.Project\HeloPrimeRPG.Model\bin\Debug\System.Net.Http.xml

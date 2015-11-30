@@ -1,6 +1,8 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using HeloPrimeRPG.Model;
+using HeloPrimeRPG.Project.Menus;
 
 namespace HeloPrimeRPG.Project
 {
@@ -12,10 +14,19 @@ namespace HeloPrimeRPG.Project
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
+        
+        int screenWidth = 800;
+        int screenHeight = 600;
+
+        MainMenu mainMenu;
+        LoadSaveMenu loadMenu;
+        GameState currentGameState;
+
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
+            
         }
 
         /// <summary>
@@ -27,7 +38,10 @@ namespace HeloPrimeRPG.Project
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
-
+            IsMouseVisible = true;
+            currentGameState = GameState.MainMenu;
+            mainMenu = new MainMenu(currentGameState);
+            loadMenu = new LoadSaveMenu(currentGameState);
             base.Initialize();
         }
 
@@ -39,6 +53,10 @@ namespace HeloPrimeRPG.Project
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
+            mainMenu.LoadContent(Content,spriteBatch);
+            loadMenu.LoadContent(Content, spriteBatch);
+                   
+            
 
             // TODO: use this.Content to load your game content here
         }
@@ -61,8 +79,16 @@ namespace HeloPrimeRPG.Project
         {
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
-
-            // TODO: Add your update logic here
+            switch (currentGameState)
+            {
+                case GameState.MainMenu:
+                    currentGameState = mainMenu.Update(currentGameState);
+                    break;
+                case GameState.Play:
+                    currentGameState = loadMenu.Update(currentGameState);
+                    break;
+            }
+            
 
             base.Update(gameTime);
         }
@@ -74,9 +100,15 @@ namespace HeloPrimeRPG.Project
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
-
-            // TODO: Add your drawing code here
-
+            switch (currentGameState)
+            {
+                case GameState.MainMenu:
+                    mainMenu.Draw(spriteBatch);
+                    break;
+                case GameState.Play:
+                    loadMenu.Draw(spriteBatch);
+                    break;
+            }
             base.Draw(gameTime);
         }
     }
