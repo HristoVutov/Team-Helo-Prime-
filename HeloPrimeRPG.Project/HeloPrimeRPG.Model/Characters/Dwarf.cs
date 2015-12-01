@@ -5,6 +5,8 @@ using System.Text;
 
 namespace HeloPrimeRPG.Model.Characters
 {
+    using Microsoft.Xna.Framework;
+
     public class Dwarf : Character
     {
         private const int DefaultHealth = 250;
@@ -13,8 +15,8 @@ namespace HeloPrimeRPG.Model.Characters
         private const int DefaultStamina = 150;
         private const int DefaultRange = 2;
 
-        public Dwarf(string id, int x, int y) 
-            : base(id, x, y, DefaultHealth, DefaultAttack, DefaultDefense, DefaultStamina, DefaultRange)
+        public Dwarf(string id, Vector2 position) 
+            : base(id, position, DefaultHealth, DefaultAttack, DefaultDefense, DefaultStamina, DefaultRange)
         {
         }
         

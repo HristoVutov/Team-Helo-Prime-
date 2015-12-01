@@ -5,6 +5,8 @@ using System.Text;
 
 namespace HeloPrimeRPG.Model.Characters
 {
+    using Microsoft.Xna.Framework;
+
     public class Human : Character
     {
         private const int DefaultHealth = 400;
@@ -13,8 +15,8 @@ namespace HeloPrimeRPG.Model.Characters
         private const int DefaultStamina = 250;
         private const int DefaultRange = 4;
 
-        public Human(string id, int x, int y) 
-            : base(id, x, y, DefaultHealth, DefaultAttack, DefaultDefense, DefaultStamina, DefaultRange)
+        public Human(string id, Vector2 position) 
+            : base(id, position, DefaultHealth, DefaultAttack, DefaultDefense, DefaultStamina, DefaultRange)
         {
         }
         

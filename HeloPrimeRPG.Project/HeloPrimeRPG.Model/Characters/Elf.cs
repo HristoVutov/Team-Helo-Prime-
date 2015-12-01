@@ -6,6 +6,7 @@ using System.Text;
 namespace HeloPrimeRPG.Model.Characters
 {
     using Interfaces;
+    using Microsoft.Xna.Framework;
 
     public class Elf : Character, ISpell
     {
@@ -16,8 +17,8 @@ namespace HeloPrimeRPG.Model.Characters
         private const int DefaultStamina = 500;
         private const int DefaultRange = 8;
 
-        public Elf(string id, int x, int y) 
-            : base(id, x, y, DefaultHealth, DefaultAttack, DefaultDefense, DefaultStamina, DefaultRange)
+        public Elf(string id, Vector2 position) 
+            : base(id, position, DefaultHealth, DefaultAttack, DefaultDefense, DefaultStamina, DefaultRange)
         {
             this.Mana = DefaultMana;
         }

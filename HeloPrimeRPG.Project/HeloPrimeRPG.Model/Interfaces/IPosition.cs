@@ -5,10 +5,10 @@ using System.Text;
 
 namespace HeloPrimeRPG.Model.Interfaces
 {
+    using Microsoft.Xna.Framework;
+
     public interface IPosition
     {
-        int X { get; set; }
-
-        int Y { get; set; }
+        Vector2 Position { get; set; }
     }
 }

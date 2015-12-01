@@ -5,6 +5,8 @@ using System.Text;
 
 namespace HeloPrimeRPG.Model.Characters
 {
+    using Microsoft.Xna.Framework;
+
     public class Orc : Character
     {
         private const int DefaultHealth = 350;
@@ -13,8 +15,8 @@ namespace HeloPrimeRPG.Model.Characters
         private const int DefaultStamina = 300;
         private const int DefaultRange = 4;
 
-        public Orc(string id, int x, int y) 
-            : base(id, x, y, DefaultHealth, DefaultAttack, DefaultDefense, DefaultStamina, DefaultRange)
+        public Orc(string id, Vector2 position) 
+            : base(id, position, DefaultHealth, DefaultAttack, DefaultDefense, DefaultStamina, DefaultRange)
         {
         }
         

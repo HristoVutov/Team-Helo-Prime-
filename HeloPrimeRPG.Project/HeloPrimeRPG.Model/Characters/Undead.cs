@@ -6,6 +6,7 @@ using System.Text;
 namespace HeloPrimeRPG.Model.Characters
 {
     using Interfaces;
+    using Microsoft.Xna.Framework;
 
     public class Undead : Character, ISpell
     {
@@ -16,8 +17,8 @@ namespace HeloPrimeRPG.Model.Characters
         private const int DefaultStamina = 350;
         private const int DefaultRange = 1;
 
-        public Undead(string id, int x, int y) 
-            : base(id, x, y, DefaultHealth, DefaultAttack, DefaultDefense, DefaultStamina, DefaultRange)
+        public Undead(string id, Vector2 position) 
+            : base(id, position, DefaultHealth, DefaultAttack, DefaultDefense, DefaultStamina, DefaultRange)
         {
             this.Mana = DefaultMana;
         }

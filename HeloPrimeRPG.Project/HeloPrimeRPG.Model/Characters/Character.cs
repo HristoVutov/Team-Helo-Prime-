@@ -7,14 +7,14 @@ namespace HeloPrimeRPG.Model.Characters
 {
     using Interfaces;
     using Items;
+    using Microsoft.Xna.Framework;
 
     public abstract class Character : GameObject, IPosition
     {
-        protected Character(string id, int x, int y, int health, int attack, int defense, int stamina, int range)
+        protected Character(string id, Vector2 position, int health, int attack, int defense, int stamina, int range)
             : base(id)
         {
-            this.X = x;
-            this.Y = y;
+            this.Position = position;
             this.Health = health;
             this.Attack = attack;
             this.Defense = defense;
@@ -23,10 +23,8 @@ namespace HeloPrimeRPG.Model.Characters
             this.IsAlive = true;
             this.Inventory = new List<Item>();
         }
-
-        public int X { get; set; }
-
-        public int Y { get; set; }
+       
+        public Vector2 Position { get; set; }
 
         public int Health { get; set; }
 
