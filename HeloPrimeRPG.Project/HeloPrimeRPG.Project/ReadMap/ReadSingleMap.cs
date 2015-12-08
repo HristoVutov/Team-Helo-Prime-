@@ -1,20 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.IO;
 
-namespace HeloPrimeRPG.Project.ReadText
+namespace HeloPrimeRPG.Project.ReadMap
 {
-    public class ReadText
+    public class ReadSingleMap
     {
-        public void ReadText()
+        public void ReadSingleMap(string path)
         {
-
             try
             {
-                using (StreamReader sr = new StreamReader(@"C:\HelloPrimeFolder\map_Water-TileC.csv"))
+                using (StreamReader sr = new StreamReader(path))
                 {
                     String line = sr.ReadToEnd();
 
@@ -39,7 +37,6 @@ namespace HeloPrimeRPG.Project.ReadText
                             matrix[i, k] = numbersLine[k];
                         }
                     }
-
                 }
             }
             catch (Exception e)
@@ -49,7 +46,6 @@ namespace HeloPrimeRPG.Project.ReadText
 
                 Console.ReadLine();
             }
-
         }
     }
 }
