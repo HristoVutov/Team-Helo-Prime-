@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SourceFile>C:/Users/vutov/Documents/GitHub/Team-Helo-Prime-/HeloPrimeRPG.Project/HeloPrimeRPG.Project/Content/Button.jpg</SourceFile>
-  <SourceTime>2015-11-30T11:40:50.2098111+02:00</SourceTime>
+  <SourceTime>2015-12-08T16:50:54.6481638+02:00</SourceTime>
   <DestFile>C:/Users/vutov/Documents/GitHub/Team-Helo-Prime-/HeloPrimeRPG.Project/HeloPrimeRPG.Project/Content/bin/Windows/Button.xnb</DestFile>
-  <DestTime>2015-11-30T11:47:06.9330592+02:00</DestTime>
+  <DestTime>2015-12-08T16:54:15.9018275+02:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2015-04-29T20:14:44+03:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

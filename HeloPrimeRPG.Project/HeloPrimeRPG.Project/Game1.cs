@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using HeloPrimeRPG.Model;
 using HeloPrimeRPG.Project.Menus;
+using HeloPrimeRPG.Project.ReadMap;
 
 namespace HeloPrimeRPG.Project
 {
@@ -20,6 +21,8 @@ namespace HeloPrimeRPG.Project
 
         MainMenu mainMenu;
         LoadSaveMenu loadMenu;
+        RaedMap readMap;
+        Map map;
         GameState currentGameState;
 
         public Game1()
@@ -42,6 +45,9 @@ namespace HeloPrimeRPG.Project
             currentGameState = GameState.MainMenu;
             mainMenu = new MainMenu(currentGameState);
             loadMenu = new LoadSaveMenu(currentGameState);
+            map = new Map(currentGameState);
+            readMap = new RaedMap();
+            readMap.ReadMap(map);
             base.Initialize();
         }
 
@@ -55,8 +61,10 @@ namespace HeloPrimeRPG.Project
             spriteBatch = new SpriteBatch(GraphicsDevice);
             mainMenu.LoadContent(Content,spriteBatch);
             loadMenu.LoadContent(Content, spriteBatch);
-                   
-            
+            //SetMap 0 0 
+            //Shows part of the map with start pos x and y
+            map.SetMap(0, 0);
+            map.LoadContent(Content, spriteBatch);
 
             // TODO: use this.Content to load your game content here
         }
@@ -85,7 +93,7 @@ namespace HeloPrimeRPG.Project
                     currentGameState = mainMenu.Update(currentGameState);
                     break;
                 case GameState.Play:
-                    currentGameState = loadMenu.Update(currentGameState);
+                    
                     break;
             }
             
@@ -106,7 +114,7 @@ namespace HeloPrimeRPG.Project
                     mainMenu.Draw(spriteBatch);
                     break;
                 case GameState.Play:
-                    loadMenu.Draw(spriteBatch);
+                    map.Draw(spriteBatch,Content);
                     break;
             }
             base.Draw(gameTime);

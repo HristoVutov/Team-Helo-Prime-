@@ -3,28 +3,29 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.IO;
+using HeloPrimeRPG.Project.Menus;
 
 namespace HeloPrimeRPG.Project.ReadMap
 {
     public class RaedMap
     {
-        public void ReadMap()
+        public void ReadMap(Map map)
         {
             string[] data = new string[2];
-            data[0] = @"C:\HelloPrimeFolder";
+            data[0] = @"C:\Users\vutov\Desktop\New folder (2)\Map";
             foreach (string path in data)
             {
                 if (File.Exists(path))
                 {
                     // This path is a file
-                    ProcessFile(path);
+                    ProcessFile(path,map);
 
 
                 }
                 else if (Directory.Exists(path))
                 {
                     // This path is a directory
-                    ProcessDirectory(path);
+                    ProcessDirectory(path,map);
                 }
                 else
                 {
@@ -34,25 +35,32 @@ namespace HeloPrimeRPG.Project.ReadMap
         }
 
 
-        public static void ProcessDirectory(string targetDirectory)
+        public static void ProcessDirectory(string targetDirectory,Map map)
         {
             // Process the list of files found in the directory.
             string[] fileEntries = Directory.GetFiles(targetDirectory);
             foreach (string fileName in fileEntries)
-                ProcessFile(fileName);
+                ProcessFile(fileName, map);
 
             // Recurse into subdirectories of this directory.
             string[] subdirectoryEntries = Directory.GetDirectories(targetDirectory);
             foreach (string subdirectory in subdirectoryEntries)
-                ProcessDirectory(subdirectory);
+                ProcessDirectory(subdirectory, map);
         }
 
         // Insert logic for processing found files here.
-        public static void ProcessFile(string path)
+        public static void ProcessFile(string path, Map map)
         {
+            if (!path.EndsWith(".csv"))
+            {
+                return;
+            }
             var singleMap = new ReadSingleMap();
-            singleMap.ReadSingleMap(path);
-            //System.Console.WriteLine("Processed file '{0}'.", path);
+            var typeSplit = path.Split('-');
+            var type = typeSplit[typeSplit.Length - 1];
+            type = type.Substring(0, type.Length - 4);
+            singleMap.ReadMap(path, type, map);
+            System.Console.WriteLine("Processed file '{0}'.", path);
         }
     }
 }

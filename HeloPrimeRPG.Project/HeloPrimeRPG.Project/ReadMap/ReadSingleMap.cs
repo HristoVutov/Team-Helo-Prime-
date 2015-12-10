@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.IO;
+using HeloPrimeRPG.Project.Menus;
 
 namespace HeloPrimeRPG.Project.ReadMap
 {
     public class ReadSingleMap
     {
-        public void ReadSingleMap(string path)
+        public void ReadMap(string path,string type,Map map)
         {
             try
             {
@@ -29,7 +30,7 @@ namespace HeloPrimeRPG.Project.ReadMap
 
                         for (int j = 0; j < singleLine.Length; j++)
                         {
-                            numbersLine[j] = int.Parse(singleLine[j]) + 1;
+                            numbersLine[j] = int.Parse(singleLine[j]);
                         }
 
                         for (int k = 0; k < len; k++)
@@ -37,6 +38,8 @@ namespace HeloPrimeRPG.Project.ReadMap
                             matrix[i, k] = numbersLine[k];
                         }
                     }
+
+                    map.LoadMap(type, matrix);
                 }
             }
             catch (Exception e)

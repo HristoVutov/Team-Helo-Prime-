@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SourceFile>C:/Users/vutov/Documents/GitHub/Team-Helo-Prime-/HeloPrimeRPG.Project/HeloPrimeRPG.Project/Content/myFont.spritefont</SourceFile>
-  <SourceTime>2015-01-20T02:24:04+02:00</SourceTime>
+  <SourceTime>2015-12-08T16:50:54.6731593+02:00</SourceTime>
   <DestFile>C:/Users/vutov/Documents/GitHub/Team-Helo-Prime-/HeloPrimeRPG.Project/HeloPrimeRPG.Project/Content/bin/Windows/myFont.xnb</DestFile>
-  <DestTime>2015-11-30T11:33:53.8880874+02:00</DestTime>
+  <DestTime>2015-12-08T16:54:14.8854075+02:00</DestTime>
   <Importer>FontDescriptionImporter</Importer>
   <ImporterTime>2015-04-29T20:14:44+03:00</ImporterTime>
   <Processor>FontDescriptionProcessor</Processor>
