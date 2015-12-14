@@ -12,7 +12,7 @@ namespace HeloPrimeRPG.Project.ReadMap
         public void ReadMap(Map map)
         {
             string[] data = new string[2];
-            data[0] = @"C:\Users\vutov\Desktop\New folder (2)\Map";
+            data[0] = @"C:\Users\vutov\Documents\GitHub\Team-Helo-Prime-\Map-Files\StartLevel";
             foreach (string path in data)
             {
                 if (File.Exists(path))
