@@ -6,20 +6,15 @@ using HeloPrimeRPG.Model.Interfaces;
 
 namespace HeloPrimeRPG.Model.Items
 {
-    public class Inventory : Item, IEffectable
+    public class Inventory
     {
         private ICollection<Item> heroItems;
 
-
-        public Inventory(string weapon, string armor)
-            : base(weapon, armor)
+        public Inventory(IEnumerable<Item> heroItems)
         {
-            this.HeroItems = new List<Item>();
+            this.HeroItems = heroItems;
         }
-
-        public int HealthGained { get; set; }
-        public int EnergyGained { get; set; }
-
+        
 
         private IEnumerable<Item> HeroItems { get; set; }
 

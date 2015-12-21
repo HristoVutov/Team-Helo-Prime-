@@ -3,14 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace HeloPrimeRPG.Model.Items
+namespace HeloPrimeRPG.Model.Items.Armors
 {
     public enum ArmorTypes
     {
-        Naked,
         Helmet,
         Chest,
-        Legs,
-        Rings
+        Cloak,
+        Pauldrons,
+        Bracers,
+        Gloves,
+        Belt,
+        Pants,
+        Boots
     }
 }

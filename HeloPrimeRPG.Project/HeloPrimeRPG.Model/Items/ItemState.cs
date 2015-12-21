@@ -6,7 +6,7 @@ using HeloPrimeRPG.Model.Interfaces;
 
 namespace HeloPrimeRPG.Model.Items
 {
-    public abstract class ItemState : Item, IStatable
+    public abstract class ItemState : IStatable
     {
         private int stamina;
         private int agility;
@@ -14,15 +14,7 @@ namespace HeloPrimeRPG.Model.Items
         private int intellect;
 
         #region Properties
-
-        public ItemState(string weapon, string armor)
-            : base(weapon, armor)
-        {
-            this.Agility = agility;
-            this.Intellect = intellect;
-            this.Stamina = stamina;
-            this.Strength = strength;
-        }
+        
 
         public int Stamina
         {

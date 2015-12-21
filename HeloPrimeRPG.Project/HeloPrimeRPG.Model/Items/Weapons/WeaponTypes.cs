@@ -8,11 +8,13 @@ namespace HeloPrimeRPG.Model.Items
 
     public enum WeaponTypes
     {
-        Unarmed,
         Sword,
         Staff,
         Dagger,
-        Bow
+        Bow,
+        Crossbow,
+        Axe,
+        Mace
     }
 
 }

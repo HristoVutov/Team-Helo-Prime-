@@ -7,12 +7,8 @@ using HeloPrimeRPG.Model.Interfaces;
 
 namespace HeloPrimeRPG.Model.Items
 {
-    public abstract class ItemEffect : Item, IEffectable
+    public abstract class ItemEffect : IEffectable
     {
-        public ItemEffect(string weapon, string armor)
-            : base(weapon, armor)
-        {
-        }
 
         public abstract int HealthGained { get; set; }
         public abstract int EnergyGained { get; set; }
